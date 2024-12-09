@@ -12,5 +12,8 @@ struct URLs {
     // MARK: - Main URL
     static var Main =  "https://fakestoreapi.com"
     
-    static let egistertypeform = Main +  "/products"
+    static let product = Main +  "/products"
+    
+    let  heder : HTTPHeaders  = [ "Accept": "application/json","Accept-Language" :
+                                    "en"]
 }

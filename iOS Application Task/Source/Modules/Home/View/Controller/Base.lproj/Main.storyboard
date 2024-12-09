@@ -38,16 +38,27 @@
                                     </collectionView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="in6-gZ-N8Q">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="in6-gZ-N8Q" secondAttribute="trailing" id="2bo-jg-kUb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="in6-gZ-N8Q" secondAttribute="bottom" id="CSn-04-fxc"/>
+                            <constraint firstItem="in6-gZ-N8Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="diw-y9-uMr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xSm-ui-95a" secondAttribute="trailing" id="eTq-Yd-BVM"/>
                             <constraint firstItem="xSm-ui-95a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fy9-i3-RrM"/>
                             <constraint firstItem="xSm-ui-95a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nvO-me-cl5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xSm-ui-95a" secondAttribute="bottom" id="zYt-Ub-t1g"/>
+                            <constraint firstItem="in6-gZ-N8Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zsH-dr-7zD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loding" destination="in6-gZ-N8Q" id="F6p-0U-WVC"/>
+                        <outlet property="productsCollectionView" destination="OOV-dD-56b" id="u5R-AN-G9N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
