@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SizeCell" id="gTV-IL-0wX" customClass="SizeCell" customModule="iOS_Application_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-U7-Sn3">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vT3-U7-Sn3" secondAttribute="trailing" id="1T1-5b-8XS"/>
+                <constraint firstItem="vT3-U7-Sn3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="G29-8W-Mfh"/>
+                <constraint firstAttribute="bottom" secondItem="vT3-U7-Sn3" secondAttribute="bottom" id="NBF-O0-eVS"/>
+                <constraint firstItem="vT3-U7-Sn3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Qgw-5u-mFq"/>
+            </constraints>
+            <connections>
+                <outlet property="sizeLabel" destination="vT3-U7-Sn3" id="m1s-IS-IW6"/>
+            </connections>
+            <point key="canvasLocation" x="-6" y="-12"/>
+        </collectionViewCell>
+    </objects>
+</document>

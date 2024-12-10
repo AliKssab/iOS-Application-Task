@@ -27,3 +27,4 @@ class DataStatsproductsViewModel {
         self.count = data.rating?.count ?? 0
     }
 }
+

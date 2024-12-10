@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - product Cell
+// MARK: - Product Cell
 class ProductsCell: UICollectionViewCell {
     
     // MARK: - IBOutlets

@@ -30,8 +30,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         viewModel.getData()
     }
-    
-    
+ 
     // MARK: - ViewModel Binding
     private func bindViewModel() {
         viewModel.isLoadingData

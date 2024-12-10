@@ -18,6 +18,7 @@ class ProductsViewModel{
     var productsData = BehaviorRelay<[DataStatsproductsViewModel]>(value: [])
     private var dataSource: ProductsModel?
     private let disposeBag = DisposeBag()
+    let mockDataSize = ["4", "23", "12", "184", "6"]
     
     // MARK: - Methods
     func getData() {
@@ -31,7 +32,7 @@ class ProductsViewModel{
                 self?.dataSource = data
                 self?.mapProductData()
             case .failure(let error):
-                print("API Call Failure: \(error)")  // Debug print
+                print("API Call Failure: \(error)")   
             }
         })
         .disposed(by: disposeBag)
@@ -54,7 +55,11 @@ class ProductsViewModel{
         return productsData.value.count
     }
     
-    // MARK: - Section Creation Methods
+    func numberOfRowsSize(in section: Int) -> Int {
+        return mockDataSize.count
+    }
+    
+    // MARK: - Section Methods
     func createStoriesSection() -> UICollectionViewCompositionalLayout {
         let item = NSCollectionLayoutItem(
             layoutSize: NSCollectionLayoutSize(
@@ -75,6 +80,31 @@ class ProductsViewModel{
         let section = NSCollectionLayoutSection(group: rowGroup)
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
         section.interGroupSpacing = 10
+        
+        return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+    func createSizeSection() -> UICollectionViewCompositionalLayout {
+        let item = NSCollectionLayoutItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(0.16),
+                heightDimension: .fractionalWidth(0.16)
+            )
+        )
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing:0)
+        
+        let rowGroup = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .fractionalHeight(1.0)
+            ),
+            subitems: [item]
+        )
+        rowGroup.interItemSpacing = .fixed(10)
+        let section = NSCollectionLayoutSection(group: rowGroup)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        
+        section.orthogonalScrollingBehavior = .continuous
         
         return UICollectionViewCompositionalLayout(section: section)
     }

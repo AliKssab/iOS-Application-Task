@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		332BF0407DE6582D163F24FE /* Pods_iOS_Application_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC9BBAC3C25FC9B6391C250 /* Pods_iOS_Application_Task.framework */; };
+		FA0107922D07B6900089023F /* HomeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0107912D07B6900089023F /* HomeDetailsViewController.xib */; };
+		FA0107932D07B6900089023F /* HomeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0107902D07B6900089023F /* HomeDetailsViewController.swift */; };
+		FA0107952D07DA150089023F /* HomeDetailsViewController+CollectionView+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0107942D07DA150089023F /* HomeDetailsViewController+CollectionView+EX.swift */; };
+		FA0107982D07DE690089023F /* SizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0107972D07DE690089023F /* SizeCell.xib */; };
+		FA0107992D07DE690089023F /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0107962D07DE690089023F /* SizeCell.swift */; };
 		FAB372202D065C9E0090B1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3721F2D065C9E0090B1F5 /* AppDelegate.swift */; };
 		FAB372222D065C9E0090B1F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB372212D065C9E0090B1F5 /* SceneDelegate.swift */; };
 		FAB372242D065C9E0090B1F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB372232D065C9E0090B1F5 /* ViewController.swift */; };
@@ -29,6 +34,11 @@
 		19DDDD4307E0E99561BFD28D /* Pods-iOS Application Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Application Task.debug.xcconfig"; path = "Target Support Files/Pods-iOS Application Task/Pods-iOS Application Task.debug.xcconfig"; sourceTree = "<group>"; };
 		2FC9BBAC3C25FC9B6391C250 /* Pods_iOS_Application_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Application_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37ED22A01F1AE235FDA54278 /* Pods-iOS Application Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Application Task.release.xcconfig"; path = "Target Support Files/Pods-iOS Application Task/Pods-iOS Application Task.release.xcconfig"; sourceTree = "<group>"; };
+		FA0107902D07B6900089023F /* HomeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsViewController.swift; sourceTree = "<group>"; };
+		FA0107912D07B6900089023F /* HomeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailsViewController.xib; sourceTree = "<group>"; };
+		FA0107942D07DA150089023F /* HomeDetailsViewController+CollectionView+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDetailsViewController+CollectionView+EX.swift"; sourceTree = "<group>"; };
+		FA0107962D07DE690089023F /* SizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
+		FA0107972D07DE690089023F /* SizeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeCell.xib; sourceTree = "<group>"; };
 		FAB3721C2D065C9E0090B1F5 /* iOS Application Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Application Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB3721F2D065C9E0090B1F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB372212D065C9E0090B1F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +85,26 @@
 				2FC9BBAC3C25FC9B6391C250 /* Pods_iOS_Application_Task.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA01078E2D07B5D90089023F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FAB372232D065C9E0090B1F5 /* ViewController.swift */,
+				FAB372462D0668FB0090B1F5 /* ViewController+CollectionView+EX.swift */,
+				FAB372252D065C9E0090B1F5 /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FA01078F2D07B5FC0089023F /* Home details */ = {
+			isa = PBXGroup;
+			children = (
+				FA0107902D07B6900089023F /* HomeDetailsViewController.swift */,
+				FA0107912D07B6900089023F /* HomeDetailsViewController.xib */,
+				FA0107942D07DA150089023F /* HomeDetailsViewController+CollectionView+EX.swift */,
+			);
+			path = "Home details";
 			sourceTree = "<group>";
 		};
 		FAB372132D065C9E0090B1F5 = {
@@ -206,9 +236,8 @@
 		FAB3723E2D065DEC0090B1F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FAB372232D065C9E0090B1F5 /* ViewController.swift */,
-				FAB372462D0668FB0090B1F5 /* ViewController+CollectionView+EX.swift */,
-				FAB372252D065C9E0090B1F5 /* Main.storyboard */,
+				FA01078E2D07B5D90089023F /* Home */,
+				FA01078F2D07B5FC0089023F /* Home details */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +247,8 @@
 			children = (
 				FAB372422D06635B0090B1F5 /* ProductsCell.swift */,
 				FAB372432D06635B0090B1F5 /* ProductsCell.xib */,
+				FA0107962D07DE690089023F /* SizeCell.swift */,
+				FA0107972D07DE690089023F /* SizeCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -293,6 +324,8 @@
 				FAB372292D065C9F0090B1F5 /* Assets.xcassets in Resources */,
 				FAB372442D06635B0090B1F5 /* ProductsCell.xib in Resources */,
 				FAB3722C2D065C9F0090B1F5 /* Base in Resources */,
+				FA0107922D07B6900089023F /* HomeDetailsViewController.xib in Resources */,
+				FA0107982D07DE690089023F /* SizeCell.xib in Resources */,
 				FAB372272D065C9E0090B1F5 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +386,10 @@
 				FAB372472D0668FB0090B1F5 /* ViewController+CollectionView+EX.swift in Sources */,
 				FAB372222D065C9E0090B1F5 /* SceneDelegate.swift in Sources */,
 				FAB372522D0683CF0090B1F5 /* UIImageView.swift in Sources */,
+				FA0107952D07DA150089023F /* HomeDetailsViewController+CollectionView+EX.swift in Sources */,
 				FAB3724B2D066F200090B1F5 /* ProductsRequest.swift in Sources */,
+				FA0107932D07B6900089023F /* HomeDetailsViewController.swift in Sources */,
+				FA0107992D07DE690089023F /* SizeCell.swift in Sources */,
 				FAB372412D065E440090B1F5 /* URLs.swift in Sources */,
 				FAB3724F2D0675A20090B1F5 /* ProductsViewModel.swift in Sources */,
 				FAB372452D06635B0090B1F5 /* ProductsCell.swift in Sources */,

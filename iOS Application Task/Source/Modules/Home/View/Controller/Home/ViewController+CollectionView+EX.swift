@@ -40,9 +40,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.configData(data: data)
         return cell
     }
-    
+ 
     // MARK: - UICollectionViewDelegate Methods
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let data = cellData[indexPath.row]
+        let vc = HomeDetailsViewController(data: data)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
-}
+ }
